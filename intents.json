@@ -1,0 +1,192 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+        "patterns": [
+                "What are my options?",
+                "Show me available choices",
+                "List options",
+                "What can I choose from?",
+                "What are the alternatives?",
+                "What options do I have?"
+              ],
+              "responses": [
+                "Let's explore your options.",
+                "Here are the available choices.",
+                "Listing the options for you.",
+                "You have several alternatives to consider.",
+                "Let's discuss the various options.",
+                "Exploring your choices."
+              ],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+        "patterns": [
+                "Adverse drug reaction",
+                "Report drug side effects",
+                "Drug reaction",
+                "Experiencing side effects",
+                "Adverse effects of medication",
+                "Allergic reaction to drug"
+              ],
+              "responses": [
+                "Let's address your concerns about adverse drug reactions.",
+                "Please provide details of the drug reaction you're experiencing.",
+                "Reporting adverse drug reactions is essential for your safety.",
+                "We'll assist you in managing any drug side effects.",
+                "Noting your experience with medication side effects.",
+                "Let's discuss any allergic reactions or adverse effects you've noticed."
+              ],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+        "patterns": [
+                "Blood pressure",
+                "Check blood pressure",
+                "View blood pressure data",
+                "Show blood pressure readings",
+                "Blood pressure records",
+                "Monitor blood pressure"
+              ],
+              "responses": [
+                "Sure, I can assist you with blood pressure information.",
+                "Checking blood pressure records.",
+                "Let's view the blood pressure data.",
+                "Showing blood pressure readings.",
+                "Retrieving blood pressure records.",
+                "Monitoring blood pressure."
+              ],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+        "patterns": [
+                "Find blood pressure records for patient ID 1001",
+                "Search blood pressure for patient 1001",
+                "Retrieve blood pressure data for patient with ID 1001",
+                "Check blood pressure readings for patient 1001",
+                "View blood pressure history for patient ID 1001",
+                "Get blood pressure measurements for patient 1001"
+              ],
+              "responses": [
+                "Sure, let me retrieve the blood pressure records for patient ID 1001.",
+                "I can assist you in searching for blood pressure data for patient 1001.",
+                "Let's retrieve the blood pressure readings for the patient with ID 1001.",
+                "I'll check the blood pressure readings for patient 1001.",
+                "Certainly, I'll fetch the blood pressure history for patient ID 1001.",
+                "I'll get the blood pressure measurements for patient 1001."
+              ],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": ["Blood-Pressure for patient_id - 01"],
+         "responses": ["Loading Blood pressure result for Patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+        "patterns": [
+                "Find pharmacies near me",
+                "Locate nearby pharmacies",
+                "Pharmacy search in mumbai",
+                "Find pharmacies ",
+                "Search for pharmacies open now",
+                "Looking for pharmacies in mumbai",
+                "Can you help me find a pharmacy around mumbai"
+                
+              ],
+              "responses": [
+                "Sure, let me find pharmacies near you.",
+                "I can assist you with locating nearby pharmacies.",
+                "Let's search for pharmacies in the mumbai.",
+                "I'll find pharmacies that offer the requested service.",
+                "Let me check for pharmacies that are open right now.",
+                "Of course, I'll look for pharmacies in the provided area.",
+                "Certainly, I'll help you find a pharmacy around the mumbai.",
+                "I'll find pharmacies  in the given mumbai."],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+        "patterns": [
+                "Find pharmacy near me",
+                "Show pharmacies nearby",
+                "Pharmacy search in mumbai",
+                "Find pharmacy with names ",
+                "Search for  pharmacy",
+                "Looking for pharmacies in mumbai",
+                "Can you help me find  pharmacy around mumbai"
+              ],
+         "responses": ["Sure, let me find pharmacies matching your criteria.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]",
+         "I can assist you with finding pharmacies based on your requirements.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]",
+         "Let's search for pharmacies that meet your specifications.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]",
+         "Certainly, I'll look for pharmacies with names containing the specified keyword.[]MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy",
+         "I'll help you discover pharmacies with the requested name.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]",
+         "Let's explore pharmacies located in the specified area.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]",
+         "Of course, I'll locate pharmacies with the specified name around the provided location.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]",
+         "I'll find pharmacies named <pharmacy_name> in the given city.[MediMart Pharmacy","HealthPlus Pharmacy","CureWell Pharmacy","VitaCare Pharmacy]"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Find hospitals near me",
+         "Show me hospitals nearby",
+         "Hospital search in mumbai",
+         "Find hospitals with cardiac hospital",
+         "Looking for hospitals in mumbai",
+         "Can you help me find hospitals around mumbai",
+         "Which hospitals provide good service in mumbai"],
+         "responses": ["CareCrest Medical Center - Located in Mumbai, Maharashtra","Harmony Hospital - Located in Powai","Emerald Health Institute - Located in Vashi","Unity Hospital - Located in Andheri"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": ["Find hospitals near me",
+         "Show hospitals nearby",
+         "Hospital search in <location>",
+         "Find hospitals with <specialty>",
+         "Search hospitals with <amenity> facilities",
+         "Looking for hospitals in <area>",
+         "Can you help me find hospitals around Mumbai"
+         ],
+         "responses": ["Sure, let me find hospitals matching your criteria.",
+         "I can assist you with finding hospitals based on your requirements.",
+         "Let's search for hospitals that meet your specifications.",
+         "Certainly, I'll look for hospitals with the specified features.",
+         "I'll help you discover hospitals equipped with the amenities you need.",
+         "Let's explore hospitals located in the specified area.",
+         "Of course, I'll locate hospitals around the provided location.",
+         "I'll find hospitals offering the requested service in the given city."],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": ["Find Cardiac Hospital hospitals near me",
+         "Show me Cardiac Hospital hospitals nearby",
+         "Hospital search for Cardiac Hospital in <location>",
+         "Find Cardiac Hospital hospitals with <specialty>",
+         "Search Cardiac Hospital hospitals with <amenity> facilities",
+         "Looking for Cardiac Hospital hospitals in <area>",
+         "Can you help me find Cardiac Hospital hospitals around <location>"],
+         "responses": ["Searching for hospitals specializing in {hospital_type}.",
+         "Locating {hospital_type} hospitals for you.",
+         "Here are the hospitals specializing in {hospital_type}.",
+         "Listing {hospital_type} medical centers.",
+         "Finding {hospital_type} hospitals near you.",
+         "Showing {hospital_type} hospitals in your area."],
+         "context": [""]
+        }
+   ]
+}
